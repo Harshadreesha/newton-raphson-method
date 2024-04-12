@@ -1,0 +1,16 @@
+deff('y=f(x)','y=x*exp(x)-1');
+deff('y1=f1(x)','y1=(x+1)*exp(x)');
+x0=1;
+d=0.0001;
+c=0;
+n=1;
+printf('successive iteration\n\tx0\t\tf(x0)\t\tf1(xo)\n');
+while n<4
+    x2=x0;
+    x1=x0-(f(x0)/f1(x0));
+    xo=x1;
+    printf('\t%f\t%f\t%f',x2,f(x1),f1(x1));
+    c=c+1;
+    n=n+1;
+end
+printf('the root after %g iteration is %g\n',c,x0);
